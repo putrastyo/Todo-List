@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <title>Todo List</title>
+</head>
+<body class="bg-emerald-600">
+  <div class="h-screen flex justify-center items-center py-9">
+    <div class="rounded-2xl bg-white w-11/12 max-h-full h-full p-5">
+      <div class="flex justify-between">
+        <h3 class="font-bold text-center mb-5">To-Do List</h3>
+        <span>made by <a href="https://www.instagram.com/putrastyo_" target="_blank" class="text-emerald-600">@putrastyo</a></span>
+      </div>
+
+      <div class="flex">
+        <input type="text" id="todo-input" placeholder="Type your task here..." class="bg-emerald-100 p-2 rounded-l-lg w-9/12 block border-2 border-emerald-900 text-sm outline-none" autocomplete="off" autofocus>
+        <button id="btn-add" class="bg-emerald-900 text-white block w-3/12 rounded-r-lg">Add</button>
+      </div>
+
+      <hr class="my-5">
+
+      <div class="overflow-auto max-h-[calc(100%-120px)]">
+        <p class="text-center" id="empty">
+          Add todo list up there!
+        </p>
+        <table class="w-full" id="todo-list"> 
+          <!-- <tr class="border-b" id="row1">
+            <td class="px-2">
+              <span class="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, excepturi!</span>
+            </td>
+            <td class="w-20 py-2">
+              <button type="button" class="bg-emerald-700 p-2 rounded disabled:opacity-50 btn-check"><img src="assets/icons/check.png" alt="done" width="12px"></button>
+              <button type="button" class="bg-red-600 p-2 rounded remove-todo"><img src="assets/icons/delete.png" alt="delete" width="12px"></button>
+            </td>
+          </tr> -->
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="assets/js/vendor/jquery-3.7.1.slim.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
