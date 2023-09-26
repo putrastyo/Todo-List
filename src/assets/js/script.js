@@ -37,7 +37,7 @@ $('#btn-add').click(function() {
   <td class="px-2">
     <span class="text-sm">${todoDesc}</span>
   </td>
-  <td class="md:w-20 w-[calc(20%)] py-2">
+  <td class="md:w-20 w-[calc(30%)] py-2">
     <button type="button" class="bg-emerald-700 p-2 rounded disabled:opacity-50 btn-check"><img src="assets/icons/check.png" alt="done" width="12px"></button>
     <button type="button" class="bg-red-600 p-2 rounded remove-todo"><img src="assets/icons/delete.png" alt="delete" width="12px"></button>
   </td>
