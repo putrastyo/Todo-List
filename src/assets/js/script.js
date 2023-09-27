@@ -3,6 +3,7 @@
 
 let q1 = Object.keys(localStorage)
 
+q1.sort(function(a,b) {return a-b})
 q1.forEach(res => {
   if(localStorage.length != 0) $('#empty').addClass('hidden')
   let key = localStorage.key(res)
