@@ -6,16 +6,15 @@ let q1 = Object.keys(localStorage)
 q1.sort(function(a,b) {return a-b})
 q1.forEach(res => {
   if(localStorage.length != 0) $('#empty').addClass('hidden')
-  let key = localStorage.key(res)
-  let value = localStorage.getItem(res)
 
+  let value = localStorage.getItem(res)
   let row = `<tr class="border-b">
   <td class="px-2">
     <span class="text-sm">${value}</span>
   </td>
   <td class="md:w-20 w-[calc(30%)] py-2">
     <button type="button" class="bg-emerald-700 p-2 rounded disabled:opacity-50 btn-check"><img src="assets/icons/check.png" alt="done" width="12px"></button>
-    <button type="button" id="${key}" class="bg-red-600 p-2 rounded remove-todo"><img src="assets/icons/delete.png" alt="delete" width="12px"></button>
+    <button type="button" id="${res}" class="bg-red-600 p-2 rounded remove-todo"><img src="assets/icons/delete.png" alt="delete" width="12px"></button>
   </td>
   </tr>`
   $('#todo-list').append(row);
@@ -27,6 +26,8 @@ q1.forEach(res => {
   keyArr.push(res)
 })
 let lastKey = jQuery.isEmptyObject(keyArr) ? 0 : keyArr.sort(function(a,b) {return b-a})[0]
+
+console.log(lastKey)
 
 $('#btn-add').click(function() {
   lastKey++
